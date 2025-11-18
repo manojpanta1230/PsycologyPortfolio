@@ -27,6 +27,12 @@
       opacity: 0.8;
       animation: fadeIn 3s ease;
     }
+    #countdown {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      font-weight: bold;
+      animation: fadeIn 3s ease;
+    }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -35,8 +41,32 @@
 </head>
 <body>
   <div>
-    <h1>We Will Be Launching Soon</h1>
+    <h1>We Will Be Launching Soon!</h1>
     <p>Stay tuned for something awesome!</p>
+    <div id="countdown"></div>
   </div>
+
+  <script>
+    // Set the countdown to 5 days from now
+    const countDownDate = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).getTime();
+
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "Launched!";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
