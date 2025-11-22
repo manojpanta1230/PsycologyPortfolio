@@ -281,8 +281,11 @@
             justify-content: center;
             font-size: 4rem;
             color: rgb(237, 148, 71);
+           
         }
-
+ .project-image img{
+     height: 110px;
+ }
         .project-card .project-content {
             padding: 2rem;
         }
