@@ -8,6 +8,15 @@
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+<!-- jQuery (required) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
       <meta property="og:title" content="Dilip Shrestha">
 <meta property="og:description" content="Description about Dilip Shrestha">
 <meta property="og:image" content="https://dilipshrestha.com/diipformal.jpg">
@@ -92,7 +101,7 @@
             <i class="fas fa-child"></i>
             <h3>Training & Capacity Building</h3>
             <p>Designing and conducting workshops for youth, social workers, and
-              NGOs.
+              NGOs and INGOs.
 
             </p>
           </div>
@@ -244,7 +253,7 @@
               <div class="project-card hidden ">
             <div class="project-image"><img src="enviroment.png" alt=""></div>
             <div class="project-content">
-              <h3>Environment Camps for Conservation Awareness  -Youth Counseller (from 2008 to 2010) 
+              <h3>Environment Camps for Conservation Awareness  -Youth Counselor (Since 2008) 
 </h3>
                             <h4 style="color: red;">Department: Program  </h4>
 
@@ -260,9 +269,7 @@
 </h3>
                             <h4 style="color: red;">Department: Program  </h4>
 
-              <p>Developed concept papers and need-based community programs.
-                Supervised field counselors and facilitated short-term
-                psycho-social counselor training.</p>
+              <p>At the Lalitpur Metropolitan City – Social Welfare Division, work is focused on supporting community well-being and promoting psychosocial awareness. Training is regularly provided to government school teachers to strengthen their understanding of mental health, student behavior, and effective teaching approaches. Awareness programs are also conducted for ward office staff to enhance their knowledge of community mental health and social issues. In addition, various stakeholders across Lalitpur are engaged to ensure they remain informed, empowered, and capable of supporting vulnerable populations. Through these continuous efforts, the division contributes significantly to strengthening community resilience and fostering psychological well-being.</p>
             </div>
           </div>
        
@@ -277,8 +284,45 @@
       </div>
     </section>
 
+    <section>
+        <h2 class="section-title">Gallery</h2>
+   <div class="owl-carousel owl-theme">
+    <div class="item"><img src="Images/1.jpg" alt=""></div>
+    <div class="item"><img src="Images/2.jpg" alt=""></div>
+    <div class="item"><img src="Images/3.jpg" alt=""></div>
+    <div class="item"><img src="Images/4.jpg" alt=""></div>
+    <div class="item"><img src="Images/5.jpg" alt=""></div>
+    <div class="item"><img src="Images/6.jpg" alt=""></div>
+    <div class="item"><img src="Images/7.jpg" alt=""></div>
+    <div class="item"><img src="Images/8.jpg" alt=""></div>
+    <div class="item"><img src="Images/9.jpg" alt=""></div>
+    <div class="item"><img src="Images/10.jpg" alt=""></div>
+    <div class="item"><img src="Images/11.jpg" alt=""></div>
+    <div class="item"><img src="Images/12.jpg" alt=""></div>
+    <div class="item"><img src="Images/13.jpg" alt=""></div>
+    <div class="item"><img src="Images/14.jpg" alt=""></div>
+    <div class="item"><img src="Images/15.jpg" alt=""></div>
+    <div class="item"><img src="Images/16.jpg" alt=""></div>
+    <div class="item"><img src="Images/17.jpg" alt=""></div>
+    <div class="item"><img src="Images/18.jpg" alt=""></div>
+    <div class="item"><img src="Images/19.jpg" alt=""></div>
+    <div class="item"><img src="Images/20.jpg" alt=""></div>
+    <div class="item"><img src="Images/21.jpg" alt=""></div>
+    <div class="item"><img src="Images/22.jpg" alt=""></div>
+    <div class="item"><img src="Images/23.jpg" alt=""></div>
+    <div class="item"><img src="Images/24.jpg" alt=""></div>
+    <div class="item"><img src="Images/25.jpg" alt=""></div>
+    <div class="item"><img src="Images/26.jpg" alt=""></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
     <!-- Blog Section -->
-    <section id="blog">
+    <section id="blog" style="padding: 0;">
       <div class="container">
         <h2 class="section-title">Awards</h2>
         <div class="awards-grid">
@@ -546,7 +590,23 @@
 
 
 
-
+ $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    dots:true,
+    dotsEach: 3,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
 
 
     </script>

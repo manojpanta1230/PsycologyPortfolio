@@ -678,3 +678,8 @@
     color: black;
   }
 }
+.owl-carousel .item img {
+      width: 100%;        /* Make image fit the width */
+      height: 200px;      /* Set fixed height for all images */
+      object-fit: cover;  /* Crop image if needed to fill space */
+  }
