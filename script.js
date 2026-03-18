@@ -78,3 +78,47 @@ if (sharedFooter) {
     </div>
   `;
 }
+
+const isHomePage = window.location.pathname === "/" || window.location.pathname === "/index.html";
+if (isHomePage) {
+  const certificateModal = document.createElement("div");
+  certificateModal.className = "certificate-modal";
+  certificateModal.setAttribute("id", "certificate-modal");
+  certificateModal.setAttribute("role", "dialog");
+  certificateModal.setAttribute("aria-modal", "true");
+  certificateModal.setAttribute("aria-label", "Certificate preview");
+
+  certificateModal.innerHTML = `
+    <div class="certificate-modal-content">
+      <button type="button" class="certificate-close" aria-label="Close certificate modal">&times;</button>
+      <img src="/image/sir%20certificate.JPG" alt="Dilip Shrestha certificate" class="certificate-image">
+    </div>
+  `;
+
+  document.body.appendChild(certificateModal);
+
+  const closeButton = certificateModal.querySelector(".certificate-close");
+  const closeModal = () => {
+    certificateModal.classList.add("hidden");
+  };
+
+  window.setTimeout(() => {
+    certificateModal.classList.add("show");
+  }, 120);
+
+  if (closeButton) {
+    closeButton.addEventListener("click", closeModal);
+  }
+
+  certificateModal.addEventListener("click", (event) => {
+    if (event.target === certificateModal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && certificateModal.classList.contains("show")) {
+      closeModal();
+    }
+  });
+}
