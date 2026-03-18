@@ -74,7 +74,7 @@ if (sharedFooter) {
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© ${currentYear} Dilip Shrestha. All Rights Reserved.</p>
+      <p>© ${currentYear} Dilip Shrestha. All Rights Reserved. Made by <a href="https://birvex.tech" target="_blank" rel="noopener noreferrer" style="color: green;">Birvex Tech Pvt Ltd</a></p>
     </div>
   `;
 }
